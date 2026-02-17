@@ -17,7 +17,7 @@
   --dark-bg-subtle:     #1c2128;
   --dark-fg:            #e6edf3;
   --dark-fg-muted:      #9198a1;
-  --dark-fg-subtle:     #6e7681;
+  --dark-fg-subtle:     #8b949e;
   --dark-border:        #30363d;
   --dark-border-muted:  #21262d;
 
@@ -36,10 +36,13 @@
   --light-bg-subtle:    #f6f8fa;
   --light-bg-inset:     #eff2f5;
   --light-fg:           #1f2328;
-  --light-fg-muted:     #59636e;
-  --light-fg-subtle:    #6e7781;
+  --light-fg-muted:     #4a535b;
+  --light-fg-subtle:    #586069;
   --light-border:       #d0d7de;
   --light-border-muted: #d8dee4;
+
+  /* ---- Teal for text on light backgrounds (WCAG AA compliant) ---- */
+  --teal-text:          #065f74;
 
   /* ---- Semantic greens ---- */
   --success-fg:         #1a7f37;
@@ -74,7 +77,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--light-fg);
   background: var(--light-bg-subtle);
@@ -92,7 +95,7 @@ body {
   background: var(--teal-400);
   color: var(--dark-bg);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   border-radius: 0 0 6px 6px;
   z-index: 1000;
   text-decoration: none;
@@ -160,7 +163,7 @@ body {
 
 .hero-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 1.075rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--teal-300);
@@ -188,7 +191,7 @@ body {
 
 .hero-subtitle {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1.3rem, 2vw, 1.55rem);
   font-weight: 400;
   line-height: 1.6;
   color: var(--dark-fg-muted);
@@ -202,7 +205,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   color: var(--dark-fg-muted);
   opacity: 0;
   animation: fadeUp 0.8s ease 0.8s forwards;
@@ -217,7 +220,7 @@ body {
 .hero-meta .label {
   color: var(--teal-400);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -294,21 +297,21 @@ body {
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
   color: var(--dark-fg);
 }
 
 .score-number span {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 400;
-  color: var(--dark-fg-subtle);
+  color: var(--teal-400);
   margin: 0 0.15rem;
 }
 
 .score-label {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   font-weight: 500;
   color: var(--dark-fg-muted);
   letter-spacing: 0.03em;
@@ -316,7 +319,7 @@ body {
 
 .score-sublabel {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 1.0rem;
   color: var(--teal-400);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -346,17 +349,17 @@ body {
 
 .section-number {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 1.05rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--teal-500);
+  color: var(--teal-text);
   margin-bottom: 0.75rem;
   display: block;
 }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-size: clamp(2.0rem, 3.5vw, 2.6rem);
   font-weight: 500;
   color: var(--light-fg);
   margin-bottom: 1.5rem;
@@ -364,7 +367,7 @@ body {
 }
 
 .executive-summary p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: var(--light-fg-muted);
   margin-bottom: 1.25rem;
   line-height: 1.8;
@@ -373,7 +376,7 @@ body {
 .executive-summary .definition {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   color: var(--light-fg);
   border-left: 3px solid var(--teal-400);
   padding: 1rem 1.5rem;
@@ -401,10 +404,10 @@ body {
 
 .col-header {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 1.0rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--teal-500);
+  color: var(--teal-text);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--light-border-muted);
@@ -418,7 +421,7 @@ body {
 }
 
 .framework-list li {
-  font-size: 0.92rem;
+  font-size: 1.12rem;
   color: var(--light-fg-muted);
   padding: 0.6rem 0.75rem;
   border-radius: 6px;
@@ -434,11 +437,11 @@ body {
 
 .framework-list .num {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 500;
-  color: var(--teal-500);
-  width: 22px;
-  height: 22px;
+  color: var(--teal-text);
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -481,7 +484,7 @@ body {
 
 .section-divider p {
   color: var(--dark-fg-muted);
-  font-size: 1rem;
+  font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -495,10 +498,10 @@ body {
 
 .toggle-all-btn {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--teal-500);
+  color: var(--teal-text);
   background: none;
   border: 1px solid var(--light-border);
   border-radius: 6px;
@@ -561,11 +564,11 @@ body {
 
 .ca-number {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   font-weight: 600;
   color: var(--light-bg);
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -577,14 +580,14 @@ body {
 .ca-title {
   flex: 1;
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 500;
   color: var(--light-fg);
 }
 
 .ca-badge {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.95rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.3rem 0.7rem;
@@ -601,7 +604,7 @@ body {
 
 .ca-badge.exceeds {
   background: rgba(6, 182, 212, 0.1);
-  color: var(--teal-500);
+  color: var(--teal-text);
   border: 1px solid rgba(6, 182, 212, 0.25);
 }
 
@@ -635,7 +638,7 @@ body {
 .dol-quote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: var(--light-fg-muted);
   border-left: 2px solid var(--teal-400);
   padding: 0.75rem 1.25rem;
@@ -651,13 +654,13 @@ body {
 .alignment-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.88rem;
+  font-size: 1.125rem;
   margin-bottom: 1.25rem;
 }
 
 .alignment-table thead th {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.95rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--light-fg-subtle);
@@ -705,12 +708,12 @@ body {
 
 .check-icon {
   color: var(--success-emphasis);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .strength-note {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   color: var(--light-fg-muted);
   padding: 0.75rem 1rem;
   background: var(--light-bg-subtle);
@@ -774,13 +777,13 @@ body {
 
 .cw-left .cw-pillar {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--teal-300);
 }
 
 .cw-left .cw-desc {
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   color: var(--dark-fg-muted);
   margin-top: 0.25rem;
 }
@@ -813,20 +816,20 @@ body {
 
 .cw-right .cw-primary {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--dark-fg);
 }
 
 .cw-right .cw-secondary {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   color: var(--dark-fg-subtle);
   margin-top: 0.2rem;
 }
 
 .cw-col-label {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.95rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
@@ -854,7 +857,7 @@ body {
   margin-top: 2.5rem;
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--dark-fg-muted);
   max-width: 600px;
   margin-left: auto;
@@ -909,8 +912,8 @@ body {
 
 .exceeds-card .ec-number {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--teal-500);
+  font-size: 0.95rem;
+  color: var(--teal-text);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -918,7 +921,7 @@ body {
 
 .exceeds-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 500;
   color: var(--light-fg);
   margin-bottom: 0.75rem;
@@ -926,7 +929,7 @@ body {
 }
 
 .exceeds-card p {
-  font-size: 0.88rem;
+  font-size: 1.125rem;
   color: var(--light-fg-muted);
   line-height: 1.7;
 }
@@ -942,14 +945,14 @@ body {
 
 .conclusion p {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--light-fg-muted);
   line-height: 1.8;
   margin-bottom: 1.25rem;
 }
 
 .conclusion p:first-of-type {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--light-fg);
 }
 
@@ -961,17 +964,18 @@ body {
   background: var(--dark-bg-muted);
   color: var(--dark-fg-muted);
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   border-top: 1px solid var(--dark-border);
 }
 
 .footer a {
-  color: var(--teal-400);
+  color: #dc2626;
   text-decoration: none;
 }
 
 .footer a:hover {
+  color: #f87171;
   text-decoration: underline;
 }
 
@@ -980,7 +984,7 @@ body {
    ============================================ */
 .framework-citation {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   color: var(--dark-fg-subtle);
   margin-top: 1.5rem;
   padding: 0.75rem 1rem;
@@ -1028,7 +1032,7 @@ body {
 .dark-quote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   color: var(--dark-fg-muted);
   border-left: 3px solid var(--teal-400);
   padding: 1rem 1.5rem;
@@ -1042,7 +1046,7 @@ body {
 .critical-context .analysis {
   max-width: 680px;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--dark-fg-muted);
   line-height: 1.8;
   margin-bottom: 1.25rem;
@@ -1069,7 +1073,7 @@ body {
 
 .bridge-side .bridge-label {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--dark-fg-subtle);
@@ -1078,13 +1082,13 @@ body {
 
 .bridge-side .bridge-value {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--teal-300);
 }
 
 .bridge-side .bridge-desc {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   color: var(--dark-fg-subtle);
   margin-top: 0.25rem;
 }
@@ -1104,7 +1108,7 @@ body {
 
 .source-citation {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: var(--dark-fg-subtle);
   text-align: center;
   margin-top: 2.5rem;
@@ -1172,7 +1176,7 @@ body {
 
 .cde-card .cde-pillar {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: var(--gold-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1181,7 +1185,7 @@ body {
 
 .cde-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 500;
   color: var(--light-fg);
   margin-bottom: 0.75rem;
@@ -1189,7 +1193,7 @@ body {
 }
 
 .cde-card p {
-  font-size: 0.88rem;
+  font-size: 1.08rem;
   color: var(--light-fg-muted);
   line-height: 1.7;
 }
@@ -1202,7 +1206,7 @@ body {
   border-radius: 0 8px 8px 0;
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--light-fg);
   line-height: 1.7;
   max-width: 700px;
@@ -1210,7 +1214,7 @@ body {
 
 .cde-source {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: var(--light-fg-subtle);
   margin-top: 1.5rem;
 }
@@ -1225,7 +1229,7 @@ body {
 }
 
 /* ============================================
-   CTA / "LEARN AI WITH US"
+   CTA / "LEARN AI WITH US" — EWU Red accent
    ============================================ */
 .cta-section {
   padding: 5rem 2rem;
@@ -1233,10 +1237,16 @@ body {
   color: var(--dark-fg);
   text-align: center;
   border-top: 1px solid var(--dark-border);
+
+  /* EWU Red overrides for this section */
+  --cta-accent:         #dc2626;
+  --cta-accent-bright:  #f87171;
+  --cta-accent-muted:   #fca5a5;
+  --cta-glow:           rgba(220, 38, 38, 0.12);
 }
 
 .cta-section .section-number {
-  color: var(--teal-300);
+  color: var(--cta-accent-bright);
   text-align: center;
   display: block;
 }
@@ -1249,7 +1259,7 @@ body {
 .cta-subtitle {
   color: var(--dark-fg-muted);
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   max-width: 600px;
   margin: 0 auto 2.5rem;
   line-height: 1.7;
@@ -1276,7 +1286,7 @@ body {
 
 .cta-card:hover {
   transform: translateY(-3px);
-  border-color: var(--teal-400);
+  border-color: var(--cta-accent);
 }
 
 .cta-logo {
@@ -1289,14 +1299,14 @@ body {
 
 .cta-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: var(--dark-fg);
   margin-bottom: 0.5rem;
 }
 
 .cta-card p {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   color: var(--dark-fg-muted);
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -1305,10 +1315,10 @@ body {
 
 .cta-link {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--teal-400);
+  color: var(--cta-accent);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -1317,7 +1327,7 @@ body {
 }
 
 .cta-link:hover {
-  color: var(--teal-300);
+  color: var(--cta-accent-bright);
   text-decoration: underline;
 }
 
@@ -1404,6 +1414,21 @@ body {
 }
 
 /* ============================================
+   SCREEN-READER ONLY (accessibility)
+   ============================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
    FOCUS STYLES (accessibility)
    ============================================ */
 :focus-visible {
@@ -1428,13 +1453,13 @@ body {
   .alignment-table td:first-child { white-space: normal; width: 40%; }
   .crosswalk-grid { grid-template-columns: 1fr auto 1fr; }
   .cw-left, .cw-right { padding: 1rem; }
-  .cw-left .cw-pillar { font-size: 1rem; }
+  .cw-left .cw-pillar { font-size: 1.2rem; }
   .exceeds-grid { grid-template-columns: 1fr; }
   .container { padding: 0 1.5rem; }
 }
 
 @media (max-width: 480px) {
-  .alignment-table { font-size: 0.8rem; }
+  .alignment-table { font-size: 1.0rem; }
   .alignment-table td { padding: 0.5rem; }
   .crosswalk-grid { grid-template-columns: 1fr; }
   .cw-left {
@@ -1451,6 +1476,20 @@ body {
     margin-bottom: 0.5rem;
   }
   .cw-col-label { display: none; }
+}
+
+/* ============================================
+   REDUCED MOTION (accessibility)
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
 }
 
 /* ============================================
